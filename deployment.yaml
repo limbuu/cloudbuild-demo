@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: test-app
+  name: test-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: test-app
+  template:
+    metadata:
+      labels:
+        run: test-app
+    spec:
+      containers:
+      - image: gcr.io/fuse-ai/built-with-kaniko-image1
+        name: test-app-image
+        imagePullPolicy: IfNotPresent
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-app-service
+spec:
+  selector:
+     run: test-app
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 5000
+  type: LoadBalancer

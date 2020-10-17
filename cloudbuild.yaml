@@ -13,13 +13,13 @@ steps:
   - --cluster=$_K8S_CLUSTER
   timeout: 500s
 substitutions:
-  _IMAGE1_NAME: gcr.io/{PROJECTID}/built-with-kaniko-image1
+  _IMAGE1_NAME: gcr.io/fuse-ai/test-app-kaniko
   _IMAGE1_DOCKERFILE_PATH: Dockerfile
   _K8S_APP_NAME: flask-app
   _K8S_NAMESPACE: default
   _K8S_YAML_PATH: deployment.yaml
-  _K8S_LOCATION: K8S-CLUSTER-LOCATION
-  _K8S_CLUSTER: K8s-CLUSTER-NAME
+  _K8S_LOCATION: us-central1-c
+  _K8S_CLUSTER: cluster-1
 options:
   substitution_option: 'ALLOW_LOOSE'
 timeout: 1000s

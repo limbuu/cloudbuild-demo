@@ -15,7 +15,7 @@ spec:
         run: test-app
     spec:
       containers:
-      - image: gcr.io/{PROJECTID}/built-with-kaniko-image
+      - image: gcr.io/fuse-ai/test-app-kaniko
         name: test-app-image
         imagePullPolicy: IfNotPresent
 ---

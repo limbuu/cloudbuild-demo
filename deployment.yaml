@@ -15,7 +15,7 @@ spec:
         run: test-app
     spec:
       containers:
-      - image: gcr.io/fuse-ai/demo-app-kaniko
+      - image: gcr.io/devfest-ktm-2020/demo-app-kaniko
         name: test-app-image
         imagePullPolicy: IfNotPresent
 ---

@@ -13,7 +13,7 @@ steps:
   - --cluster=$_K8S_CLUSTER
   timeout: 500s
 substitutions:
-  _IMAGE1_NAME: gcr.io/fuse-ai/demo-app-kaniko
+  _IMAGE1_NAME: gcr.io/devfest-ktm-2020/demo-app-kaniko
   _IMAGE1_DOCKERFILE_PATH: Dockerfile
   _K8S_APP_NAME: flask-app
   _K8S_NAMESPACE: default

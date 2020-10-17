@@ -15,7 +15,7 @@ steps:
 substitutions:
   _IMAGE1_NAME: gcr.io/fuse-ai/test-app-kaniko
   _IMAGE1_DOCKERFILE_PATH: Dockerfile
-  _K8S_APP_NAME: flask-app-app
+  _K8S_APP_NAME: flask-app
   _K8S_NAMESPACE: default
   _K8S_YAML_PATH: deployment.yaml
   _K8S_LOCATION: us-central1-c
@@ -24,4 +24,4 @@ options:
   substitution_option: 'ALLOW_LOOSE'
 timeout: 1000s
 tags: [$COMMIT_SHA,$_K8S_APP_NAME]
-logsBucket: 'gs://cloudbuild-logs'
+#logsBucket: 'gs://cloudbuild-logs'
